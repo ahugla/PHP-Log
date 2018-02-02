@@ -10,7 +10,8 @@
     echo "fichier  : index.html         *******      ";
 
     echo "Log PHP via error_log        *******       ";
-    Error_log("********** from error_log----------");
+    Error_log("********** from error_log(mess)----------");
+    Error_log("********** from error_log(mess,3,'/var/log/httpd/access_log')----------",3,'/var/log/httpd/access_log');
 
     echo "Log PHP via syslog       *********       FIN";
     syslog(0,"********** from syslog 0----------");    # LOG_EMERG
